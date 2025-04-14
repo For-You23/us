@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry Muskiii 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="animated-text heart-beat">I'm So Sorry, Muskiii 😔</h1>
+    <p class="animated-text">I know I hurt you... and I hate that I did.</p>
+    <button onclick="showApology()">I'm sorry 💖</button>
+
+    <div class="card hidden" id="apologyCard">
+      <h2>I want to make it up to you, Muskiii 😔</h2>
+      <p>You mean everything to me, and I'll do anything to make things right.</p>
+      <!-- Cute Dog Image -->
+      <img src="https://stock.adobe.com/search?k=sorry+dog" class="gif" alt="Sorry Jaan">
+      <button onclick="startGame()">Start the game to forgive me?</button>
+    </div>
+
+    <div class="hidden" id="game">
+      <h2>Catch the hearts! 💘</h2>
+      <p id="score">Hearts Collected: 0 / 10</p>
+      <div id="heart-container"></div>
+    </div>
+
+    <div class="hidden" id="finalMessage">
+      <h2>Did I earn your forgiveness, Muskiii?</h2>
+      <button onclick="forgive()">Yes, you're forgiven! 💖</button>
+      <button onclick="notYet()">Not yet 😔</button>
+    </div>
+
+    <div class="hidden" id="forgiven">
+      <h2>Thank you for forgiving me, Muskiii! 💖</h2>
+      <p>I'll never hurt you again. I love you so much! 💕</p>
+      <!-- Cute Dog Image -->
+      <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" class="gif" alt="Forgiven Dog Image">
+    </div>
+
+    <div id="confetti"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Caveat', cursive;
+  background: linear-gradient(270deg, #ffe0f0, #e6f0ff, #ffe0f0);
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  overflow-x: hidden;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 {
+  color: #ff5e99;
+  animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+button {
+  background-color: #ff85a2;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 24px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: white;
+  margin: 1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+}
+
+button:hover {
+  background-color: #ff66a0;
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.5);
+}
+
+.heart-beat {
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.card {
+  background: #fff5fa;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+  position: relative;
+}
+
+.card::after {
+  content: "✨";
+  font-size: 2rem;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  50% { transform: scale(1.4) rotate(20deg); opacity: 0.5; }
+}
+
+@keyframes floatingSparkles {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300px) translateY(300px);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: absolute;
+  background-color: #ffffff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: floatingSparkles 6s ease-in-out infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+#heart-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center/contain;
+  animation: fall 4s linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -50px; opacity: 0.7; }
+  100% { top: 100%; opacity: 1; }
+}
+
+.confetti {
+  position: absolute;
+  top: -50px;
+  width: 12px;
+  height: 12px;
+  background-color: #ff6f91;
+  opacity: 0;
+  animation: confettiAnimation 3s linear infinite;
+}
+
+@keyframes confettiAnimation {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg) translateY(100vh);
+  }
+}
